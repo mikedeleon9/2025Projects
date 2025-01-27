@@ -3,12 +3,12 @@
 
 @layer steps {
     .step{
-        @apply flex
+        @apply flex text-white
     }
 }
 
 @layer numbers {
     .number {
-        @apply bg-[#bfe2fd] p-2 rounded-full
+        @apply bg-[#bfe2fd] p-2 rounded-full text-black
     }
 }
