@@ -6,42 +6,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./input.css">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <main class="flex items-center justify-center h-screen bg-[#f0f6ff]">
+    <main class="flex items-center  justify-center h-screen bg-[#f0f6ff]">
         <div class="container w-3/5 p-4 h-3/4 bg-white rounded-xl grid grid-cols-3">
-            <div class="side-bar  p-6 bg-[url(./multi-step-form-main/multi-step-form-main/assets/images/bg-sidebar-desktop.svg)] bg-cover bg-bottom rounded-xl">
+            <div class="side-bar flex flex-col gap-4 border-red-400 p-6 bg-[url(./multi-step-form-main/multi-step-form-main/assets/images/bg-sidebar-desktop.svg)] bg-cover bg-bottom rounded-xl">
                 <div class="step">
                     <span class="number">1</span>
                     <div class="step-info">
-                        <p>Step 1</p>
-                        <p>YOUR INFO</p>
+                        <p class="text-step">Step 1</p>
+                        <p class="text-md font-semibold">YOUR INFO</p>
                     </div>
                 </div>
                 <div class="step">
                     <span class="number">2</span>
                     <div class="step-info">
-                        <p>Step 2</p>
-                        <p>SELECT PLAN</p>
+                        <p class="text-step">Step 2</p>
+                        <p class="text-md font-semibold">SELECT PLAN</p>
                     </div>
                 </div>
                 <div class="step">
                     <span class="number">3</span>
                     <div class="step-info">
-                        <p>Step 3</p>
-                        <p>ADD-ONS</p>
+                        <p class="text-step">Step 3</p>
+                        <p class="text-md font-semibold">ADD-ONS</p>
                     </div>
                 </div>
                 <div class="step">
                     <span class="number">4</span>
                     <div class="step-info">
-                        <p>Step 4</p>
-                        <p>SUMMARY</p>
+                        <p class="text-step">Step 4</p>
+                        <p class="text-md font-semibold">SUMMARY</p>
                     </div>
                 </div>
                
+            </div>
+            <div class="personal-info flex flex-col gap-4 col-span-2 p-8 ">
+                <div>
+                    <h1>Personal info</h1>
+                    <p>please provide your name, email address, and phone number.</p>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="name" type="text" placeholder="e.g. stephen King">
+                    <label for="email">Email Address</label>
+                    <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="email" type="email" placeholder="e.g. stephenking@lorem.com">
+                    <label for="number">Phone Number</label>
+                    <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="number" type="number" placeholder="e.g. +1 234 567 890">
+                </div>
             </div>
         </div>
     </main>
