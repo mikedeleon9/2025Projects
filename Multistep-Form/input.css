@@ -1,2 +1,14 @@
 @import "tailwindcss";
 
+
+@layer steps {
+    .step{
+        @apply flex
+    }
+}
+
+@layer numbers {
+    .number {
+        @apply bg-[#bfe2fd] p-2 rounded-full
+    }
+}
