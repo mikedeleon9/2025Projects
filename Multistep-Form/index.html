@@ -13,7 +13,7 @@
 </head>
 <body>
     <main class="flex items-center  justify-center h-screen bg-[#f0f6ff]">
-        <div class="container w-3/5 p-4 h-3/4 bg-white rounded-xl grid grid-cols-3">
+        <div class="container w-3/5 p-4 h-4/5 bg-white rounded-xl grid grid-cols-3">
             <div class="side-bar flex flex-col gap-4 border-red-400 p-6 bg-[url(./multi-step-form-main/multi-step-form-main/assets/images/bg-sidebar-desktop.svg)] bg-cover bg-bottom rounded-xl">
                 <div class="step">
                     <span class="number">1</span>
@@ -45,20 +45,30 @@
                 </div>
                
             </div>
-            <div class="personal-info flex flex-col gap-4 col-span-2 p-8 ">
+            <div class="personal-info flex flex-col gap-4 col-span-2 px-16 py-8 justify-between">
                 <div>
-                    <h1>Personal info</h1>
-                    <p>please provide your name, email address, and phone number.</p>
+                <div class="mb-8">
+                    <h1 class="text-2xl text-(--navy) font-bold mb-2">Personal info</h1>
+                    <p class="text-sm">Please provide your name, email address, and phone number.</p>
                 </div>
-                <div>
-                    <label for="name">Name</label>
-                    <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="name" type="text" placeholder="e.g. stephen King">
-                    <label for="email">Email Address</label>
-                    <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="email" type="email" placeholder="e.g. stephenking@lorem.com">
-                    <label for="number">Phone Number</label>
-                    <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="number" type="number" placeholder="e.g. +1 234 567 890">
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1 ">
+                        <label class="text-(--navy) text-sm font-medium" for="name">Name</label>
+                        <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="name" type="text" placeholder="e.g. stephen King">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-(--navy) text-sm font-medium" for="email">Email Address</label>
+                        <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="email" type="email" placeholder="e.g. stephenking@lorem.com">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-(--navy) text-sm font-medium" for="number">Phone Number</label>
+                        <input class="border-1 border-slate-400 p-2 rounded-lg w-full" id="number" type="number" placeholder="e.g. +1 234 567 890">
+                    </div>
                 </div>
             </div>
+                <button class="self-end bg-(--navy) text-white px-5 py-3 cursor-pointer rounded-md text-sm">Next Step</button>
+            </div>
+            
         </div>
     </main>
 </body>
