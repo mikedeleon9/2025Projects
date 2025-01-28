@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "tailwindcss";
 
 *{
@@ -20,4 +21,28 @@
     .text-step{
         @apply text-sm uppercase text-[#d6d9e6]
     }
+=======
+@import "tailwindcss";
+
+*{
+    font-family: Ubuntu, sans-serif;
+    --navy: #02295a;
+}
+@layer steps {
+    .step{
+        @apply flex text-white items-center  gap-4 
+    }
+}
+
+@layer numbers {
+    .number {
+        @apply  rounded-full border-1 px-3 py-1 cursor-pointer
+    }
+}
+
+@layer text-steps {
+    .text-step{
+        @apply text-sm uppercase text-[#d6d9e6]
+    }
+>>>>>>> fde5bf9a079b6145eb4fbd278edea6080eddb0c3
 }

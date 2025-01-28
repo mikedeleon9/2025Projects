@@ -698,12 +698,6 @@
       max-width: 96rem !important;
     }
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-8 {
-    margin-bottom: calc(var(--spacing) * 8);
-  }
   .box-border {
     box-sizing: border-box;
   }
@@ -791,9 +785,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
   .h-4\/5 {
     height: calc(4/5 * 100%);
   }
@@ -812,14 +803,8 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
   }
   .w-3\/5 {
     width: calc(3/5 * 100%);
@@ -969,9 +954,6 @@
   }
   .animate-none {
     animation: none;
-  }
-  .cursor-pointer {
-    cursor: pointer;
   }
   .touch-pinch-zoom {
     --tw-pinch-zoom: pinch-zoom;
@@ -1344,9 +1326,6 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
-  .rounded-md {
-    border-radius: var(--radius-md);
-  }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -1405,10 +1384,6 @@
   .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
   }
   .border-x {
     border-inline-style: var(--tw-border-style);
@@ -1475,9 +1450,6 @@
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
-  .bg-\(--navy\) {
-    background-color: var(--navy);
-  }
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
   }
@@ -1486,9 +1458,6 @@
   }
   .bg-\[\#f0f6ff\] {
     background-color: #f0f6ff;
-  }
-  .bg-\[--navy\] {
-    background-color: --navy;
   }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
@@ -1689,20 +1658,8 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-  .px-5 {
-    padding-inline: calc(var(--spacing) * 5);
-  }
-  .px-6 {
-    padding-inline: calc(var(--spacing) * 6);
-  }
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
@@ -1753,10 +1710,6 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
@@ -1764,10 +1717,6 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -1846,11 +1795,8 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
-  .text-\(--navy\) {
-    color: var(--navy);
-  }
-  .text-white {
-    color: var(--color-white);
+  .text-\[\#02295a\] {
+    color: #02295a;
   }
   .capitalize {
     text-transform: capitalize;
@@ -2298,7 +2244,6 @@
 }
 * {
   font-family: Ubuntu, sans-serif;
-  --navy: #02295a;
 }
 @layer steps {
   .step {
@@ -2310,7 +2255,6 @@
 }
 @layer numbers {
   .number {
-    cursor: pointer;
     border-radius: calc(infinity * 1px);
     border-style: var(--tw-border-style);
     border-width: 1px;
