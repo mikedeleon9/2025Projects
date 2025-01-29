@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import './App.css'
 import "./index.css"
-
+import sidebarImage from './'
 
 function App() {
   
