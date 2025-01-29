@@ -3,11 +3,11 @@ import "../input.css"
 export default function Step(props){
     return(
         <>
-            <div class="step">
-                <span class="number">{props.step}</span>
-                <div class="step-info">
-                    <p class="text-step">Step {props.step}</p>
-                    <p class="text-md font-semibold">{props.description}</p>
+            <div className="step flex text-black items-center  gap-4 ">
+                <span className="number rounded-full border-1 px-3 py-1 cursor-pointer border-white text-white">{props.step}</span>
+                <div className="step-info">
+                    <p className="text-step text-sm uppercase text-[#d6d9e6]">Step {props.step}</p>
+                    <p className="text-md font-semibold text-white">{props.description}</p>
                 </div>
             </div>
         </>

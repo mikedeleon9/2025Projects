@@ -1,20 +1,13 @@
 @import "tailwindcss";
 
-*{
-    font-family: Ubuntu, sans-serif;
-    --navy: #02295a;
-}
+
 @layer steps {
     .step{
         @apply flex text-white items-center  gap-4 
     }
 }
 
-@layer numbers {
-    .number {
-        @apply  rounded-full border-1 px-3 py-1 cursor-pointer border-white
-    }
-}
+
 
 @layer text-steps {
     .text-step{
