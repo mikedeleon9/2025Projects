@@ -1,3 +1,5 @@
+import "../input.css"
+
 export default function Step(props){
     return(
         <>

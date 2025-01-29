@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import './App.css'
+import "./index.css"
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
  <div class="container w-3/5 p-4 h-4/5 bg-white rounded-xl grid grid-cols-3">
  <Sidebar></Sidebar>
  <div class="personal-info flex flex-col gap-4 col-span-2 px-16 py-8 justify-between">
-  
+
  </div>
  </div>
   
