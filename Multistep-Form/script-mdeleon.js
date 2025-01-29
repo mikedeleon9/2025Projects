@@ -26,9 +26,6 @@ function nextStep(){
     if(currentStep === 2){
         selectPlan();
     }
-    else if(currentStep === 3){
-        addOns();
-    }
     
 };
 
@@ -38,8 +35,3 @@ function selectPlan(){
     `
 }
 
-function addOns(){
-    infoContainer.innerHTML = `
-        second test
-    `
-}
