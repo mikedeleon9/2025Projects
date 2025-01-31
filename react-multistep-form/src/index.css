@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
-*{
-  font-family: Ubuntu, sans-serif;
+
+:root {
   --navy: #02295a;
 }
+
+
+*{
+  font-family: Ubuntu, sans-serif;
+
+}
+
 
 
 :root {
