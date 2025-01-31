@@ -1,4 +1,4 @@
-import InputField from "./inputField"
+import InputField from "./InputField"
 
 export default function YourInfo(){
     return(
