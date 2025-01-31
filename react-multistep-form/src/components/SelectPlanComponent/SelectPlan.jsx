@@ -6,9 +6,9 @@ import proImage from '../../assets/images/icon-pro.svg'
 export default function SelectPlan(){
     return(
         <div className="grid grid-cols-3">
-            <Plans image={arcadeImage}></Plans>
-            <Plans image={advanceImage}></Plans>
-            <Plans image={proImage}></Plans>
+            <Plans image={arcadeImage} option="Arcade" price="9"/>
+            <Plans image={advanceImage} option="Pro" price="12"/>
+            <Plans image={proImage} option="Advanced" price="15"/>
         </div>
     )
 }
