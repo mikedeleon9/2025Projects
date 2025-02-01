@@ -24,7 +24,9 @@ function App() {
           <Sidebar></Sidebar>
         <div className="personal-info flex flex-col col-span-2 px-12 gap-4 py-8 justify-between ">
           <div className="flex flex-col gap-2 ">
-          <Heading></Heading>
+          <Heading
+          currentPage={currentPage}
+          ></Heading>
            
           {currentPage === 0 && <YourInfo />}
           {currentPage === 1 && <SelectPlan />}
