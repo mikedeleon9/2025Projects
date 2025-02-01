@@ -3,11 +3,20 @@ import Sidebar from './components/Sidebar'
 import './App.css'
 import "./index.css"
 import SelectPlan from './components/SelectPlanComponent/SelectPlan'
+import YourInfo from './components/YourInfo/YourInfo'
 import Heading from './components/Heading'
 import Buttons from './components/Buttons'
 
 function App() {
-  let currentPage = 0;
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const nextPage = () => {
+    setCurrentPage((prev) => prev + 1)
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev > 0 ? prev -1 : 0))
+  };
 
   return (
     <div className="flex items-center  justify-center w-screen h-screen bg-[#f0f6ff]">
@@ -17,9 +26,10 @@ function App() {
           <div className="flex flex-col gap-2 ">
           <Heading></Heading>
            
-          <SelectPlan></SelectPlan>
+          {currentPage === 0 && <YourInfo />}
+          {currentPage === 1 && <SelectPlan />}
           </div>
-           <Buttons></Buttons>
+           <Buttons onBack={prevPage} onNext={nextPage} currentPage={currentPage}></Buttons>
         </div>
         
       </div>
