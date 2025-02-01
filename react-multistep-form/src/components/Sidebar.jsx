@@ -1,9 +1,9 @@
 import React from "react"
-import Step from './YourInfo/Step'
+import Step from './Step'
 
 
 
-function Sidebar({currentPage}){
+function Sidebar(){
     return(
         <div className="`side-bar flex flex-col gap-4 border-red-400 p-6 bg-[url('./assets/images/bg-sidebar-desktop.svg')] bg-cover bg-bottom rounded-xl">
             <Step step="1" description="YOUR INFO"></Step>

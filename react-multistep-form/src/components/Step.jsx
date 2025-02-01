@@ -1,6 +1,9 @@
 
 
 export default function Step(props){
+
+ 
+
     return(
         <>
             <div className="step flex text-black items-center  gap-4 ">
