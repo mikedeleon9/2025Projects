@@ -10,9 +10,9 @@ function App() {
 
   return (
     <div className="flex items-center  justify-center w-screen h-screen bg-[#f0f6ff]">
-      <div className="container w-3/5 p-4 h-4/5 bg-white rounded-xl grid grid-cols-3">
+      <div className="container w-3/5 h-4/5 p-4 bg-white rounded-xl grid grid-cols-3">
           <Sidebar></Sidebar>
-        <div className="personal-info flex flex-col gap-4 col-span-2 px-16 py-8 justify-between">
+        <div className="personal-info flex flex-col col-span-2 px-12 py-8 justify-between">
           
             <InfoContainer></InfoContainer>
           
