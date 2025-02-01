@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { CurrentPageContext } from './components/CurrentPageContext';
 import Sidebar from './components/Sidebar'
 import './App.css'
 import "./index.css"
@@ -19,14 +20,13 @@ function App() {
   };
 
   return (
+    <CurrentPageContext.Provider value={currentPage}>
     <div className="flex items-center  justify-center w-screen h-screen bg-[#f0f6ff]">
       <div className="container w-3/5 h-4/5 p-4 bg-white rounded-xl grid grid-cols-3">
-          <Sidebar></Sidebar>
+          <Sidebar currentPage={currentPage}></Sidebar>
         <div className="personal-info flex flex-col col-span-2 px-12 gap-4 py-8 justify-between ">
           <div className="flex flex-col gap-2 ">
-          <Heading
-          currentPage={currentPage}
-          ></Heading>
+          <Heading></Heading>
            
           {currentPage === 0 && <YourInfo />}
           {currentPage === 1 && <SelectPlan />}
@@ -37,6 +37,7 @@ function App() {
       </div>
       
     </div>
+    </CurrentPageContext.Provider>
   )
 }
 
