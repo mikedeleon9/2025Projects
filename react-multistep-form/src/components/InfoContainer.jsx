@@ -1,6 +1,7 @@
 import YourInfo from "./YourInfo/YourInfo"
 import SelectPlan from "./SelectPlanComponent/SelectPlan"
 import Heading from "./Heading"
+import InputField from "./YourInfo/InputField"
 
 export default function InfoContainer(){
 
@@ -9,8 +10,7 @@ export default function InfoContainer(){
             <div className="mb-8">
                 <Heading></Heading>
             </div>
-         
-           <SelectPlan></SelectPlan>
+        <YourInfo></YourInfo>
             
         </div>
     )
