@@ -9,14 +9,14 @@ import Heading from './components/Heading'
 import Buttons from './components/Buttons'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const nextPage = () => {
     setCurrentPage((prev) => prev + 1)
   };
 
   const prevPage = () => {
-    setCurrentPage((prev) => (prev > 0 ? prev -1 : 0))
+    setCurrentPage((prev) => (prev > 1 ? prev -1 : 1))
   };
 
   return (
@@ -28,8 +28,8 @@ function App() {
           <div className="flex flex-col gap-2 ">
           <Heading></Heading>
            
-          {currentPage === 0 && <YourInfo />}
-          {currentPage === 1 && <SelectPlan />}
+          {currentPage === 1 && <YourInfo />}
+          {currentPage === 2 && <SelectPlan />}
           </div>
            <Buttons onBack={prevPage} onNext={nextPage} currentPage={currentPage}></Buttons>
         </div>
