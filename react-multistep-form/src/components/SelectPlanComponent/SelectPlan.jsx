@@ -7,10 +7,17 @@ import proImage from '../../assets/images/icon-pro.svg'
 
 export default function SelectPlan(){
 
-    const [selected, setSelected] = useState(null);
+    const [selected, setSelected] = useState(() => {
+        const savedSelection = localStorage.getItem("selectedPlan");
+        return savedSelection ? savedSelection : null; // Ensure a valid default value
+    });
 
     const handleChange = (checkbox) => {
-        setSelected(checkbox === selected ? null : checkbox);
+        setSelected((prevSelected) => {
+          const newSelection = checkbox === prevSelected ? null : checkbox;
+          localStorage.setItem("selectedPlan", newSelection); // Save to localStorage
+          return newSelection;
+        });
       };
 
 
