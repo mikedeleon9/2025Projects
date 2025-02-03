@@ -6,7 +6,7 @@ export default function Plans(props){
             <img src={props.image}></img>
             <div className="">
             <p className="text-sm font-bold">{props.option}</p>
-            <p className="text-sm text-gray-400">${props.price} /mo</p>
+            <p className="text-sm text-gray-400">${props.price}</p>
             </div>
         </div>
     )
