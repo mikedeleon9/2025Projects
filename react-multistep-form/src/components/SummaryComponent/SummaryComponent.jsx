@@ -7,6 +7,9 @@ export default function SummaryComponent(){
          {selectedSubscription === "Arcade" && (
             <p>Test Arcade</p>
          )}
+         {selectedSubscription === "Pro" && (
+            <p>Test Pro</p>
+         )}
         </div>
     )
 }

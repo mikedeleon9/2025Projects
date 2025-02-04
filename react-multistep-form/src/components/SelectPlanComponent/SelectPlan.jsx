@@ -24,15 +24,22 @@ export default function SelectPlan(){
       };
 
       const handleSubscriptionChange = (subscription) => {
-        setSelectedSubscription(subscription);
-        localStorage.setItem("selectedSubscription", subscription);
+        setSelectedSubscription((prevSubscription) => {
+            const newSubscription = prevSubscription === subscription ? null : subscription;
+            if (newSubscription) {
+                localStorage.setItem("selectedSubscription", newSubscription);
+            } else {
+                localStorage.removeItem("selectedSubscription"); // Remove from local storage if deselected
+            }
+            return newSubscription;
+        });
     };
 
 
     return(
         <div className="flex flex-col gap-8 ">
         <div className="grid grid-cols-3 gap-4 max-h-42">
-            <div onClick={() => handleSubscriptionChange("Arcade")}>
+            <div onClick={() => handleSubscriptionChange("Arcade")}  >
             <Plans  image={arcadeImage} option="Arcade" price={selected === "monthly" ? "9/mo" : "90/yr"}/>
             </div>
             <div onClick={() => handleSubscriptionChange("Advanced")}>
