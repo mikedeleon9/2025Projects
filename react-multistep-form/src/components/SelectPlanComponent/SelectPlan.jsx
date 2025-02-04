@@ -39,10 +39,10 @@ export default function SelectPlan(){
     return(
         <div className="flex flex-col gap-8 ">
         <div className="grid grid-cols-3 gap-4 max-h-42">
-            <div onClick={() => handleSubscriptionChange("Arcade")}  >
+            <div onClick={() => handleSubscriptionChange("Arcade")} className={`cursor-pointer border-2 rounded-lg ${selectedSubscription === "Arcade" ? " border-blue-100" : "border-black"}`} >
             <Plans  image={arcadeImage} option="Arcade" price={selected === "monthly" ? "9/mo" : "90/yr"}/>
             </div>
-            <div onClick={() => handleSubscriptionChange("Advanced")}>
+            <div className="border-2" onClick={() => handleSubscriptionChange("Advanced")}>
             <Plans  image={advanceImage} option="Advanced" price={selected === "monthly" ? "12/mo" : "120/yr"}/>
             </div>
             <div onClick={() => handleSubscriptionChange("Pro")}>

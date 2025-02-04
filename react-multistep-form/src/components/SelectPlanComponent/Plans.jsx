@@ -10,7 +10,7 @@ export default function Plans(props){
         setIsClicked(!isClicked)
     }
     return(
-        <div onClick={(handleClick)} className={`border-(--navy) border-1 rounded-lg ${isClicked ? "border-2" : null} p-3 flex flex-col items-start justify-between gap-6`}>
+        <div onClick={(handleClick)} className={`border-(--navy)  rounded-lg  p-3 flex flex-col items-start justify-between gap-6`}>
             <img src={props.image}></img>
             <div className="">
             <p className="text-sm font-bold">{props.option}</p>
