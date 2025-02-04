@@ -25,21 +25,21 @@ export default function SelectPlan(){
         <div className="flex flex-col gap-8 ">
         <div className="grid grid-cols-3 gap-4 max-h-42">
             <Plans image={arcadeImage} option="Arcade" price={selected === "monthly" ? "9/mo" : "90/yr"}/>
-            <Plans image={advanceImage} option="Pro" price={selected === "monthly" ? "12/mo" : "120/yr"}/>
-            <Plans image={proImage} option="Advanced" price={selected === "monthly" ? "15/mo" : "150/yr"}/>
+            <Plans image={advanceImage} option="Advanced" price={selected === "monthly" ? "12/mo" : "120/yr"}/>
+            <Plans image={proImage} option="Pro" price={selected === "monthly" ? "15/mo" : "150/yr"}/>
         </div>
         <div className="flex items-center justify-center bg-gray-100 p-1 rounded-lg gap-8">
-            <div className="flex">
+            <div className="flex gap-2">
             <input checked={selected === "monthly"} 
            onChange={() => handleChange("monthly")}
             type="checkbox"></input>
-            <p>Monthly</p>
+            <p> Monthly</p>
             </div>
-            <div className="flex">
+            <div className="flex gap-2">
             <input checked={selected === "yearly"}
             onChange={() => {handleChange("yearly")}}  
             type="checkbox"></input>
-            <p>Yearly</p>
+            <p> Yearly</p>
             </div>
         </div>
         </div>

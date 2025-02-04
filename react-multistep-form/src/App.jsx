@@ -5,6 +5,8 @@ import './App.css'
 import "./index.css"
 import SelectPlan from './components/SelectPlanComponent/SelectPlan'
 import YourInfo from './components/YourInfo/YourInfo'
+import AddOnComponent from './components/AddOns/AddOnComponent';
+import SummaryComponent from './components/SummaryComponent/SummaryComponent';
 import Heading from './components/Heading'
 import Buttons from './components/Buttons'
 
@@ -12,11 +14,12 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const nextPage = () => {
-    setCurrentPage((prev) => prev + 1)
+    setCurrentPage((prev) => prev < 5 ? prev + 1 : 4)
   };
 
   const prevPage = () => {
     setCurrentPage((prev) => (prev > 1 ? prev -1 : 1))
+    console.log(prev)
   };
 
   return (
@@ -30,6 +33,9 @@ function App() {
            
           {currentPage === 1 && <YourInfo />}
           {currentPage === 2 && <SelectPlan />}
+          {currentPage === 3 && <AddOnComponent />}
+          {currentPage === 4 && <SummaryComponent />}
+
           </div>
            <Buttons onBack={prevPage} onNext={nextPage} currentPage={currentPage}></Buttons>
         </div>
