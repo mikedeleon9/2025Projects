@@ -1,15 +1,12 @@
 export default function SummaryComponent(){
-    const selectedPlan = localStorage.getItem('selectedPlan');
+    const selectedSubscription = localStorage.getItem('selectedSubscription');
+    
 
     return (
         <div>
-            {selectedPlan === "monthly" && (
-                <h1>test</h1>
-            )}
-            
-            {selectedPlan === "yearly" && (
-                <h1>test2</h1>
-            )}
+         {selectedSubscription === "Arcade" && (
+            <p>Test Arcade</p>
+         )}
         </div>
     )
 }
