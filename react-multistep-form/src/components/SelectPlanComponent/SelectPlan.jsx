@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import Plans from "./Plans"
 import arcadeImage from '../../assets/images/icon-arcade.svg'
 import advanceImage from '../../assets/images/icon-advanced.svg'
@@ -11,9 +11,14 @@ export default function SelectPlan(){
         return localStorage.getItem("selectedPlan") || "monthly";
     });
 
-    const [selectedSubscription, setSelectedSubscription] = useState(() => {
-        return localStorage.getItem("selectedSubscription") || "Arcade";
-    });
+    const [selectedSubscription, setSelectedSubscription] = useState(null);
+
+    useEffect(() => {
+        const storedSubscription = localStorage.getItem("selectedSubscription");
+        if (storedSubscription) {
+          setSelectedSubscription(storedSubscription);
+        }
+      }, []);
 
     const handleChange = (checkbox) => {
         setSelected((prevSelected) => {
@@ -39,13 +44,18 @@ export default function SelectPlan(){
     return(
         <div className="flex flex-col gap-8 ">
         <div className="grid grid-cols-3 gap-4 max-h-42">
-            <div onClick={() => handleSubscriptionChange("Arcade")} className={`cursor-pointer border-2 rounded-lg ${selectedSubscription === "Arcade" ? " border-blue-100" : "border-black"}`} >
+            <div onClick={() => handleSubscriptionChange("Arcade")} className={`cursor-pointer border-2  rounded-lg ${selectedSubscription === "Arcade" ? " border-blue-500" : "border-slate-300"}`} >
             <Plans  image={arcadeImage} option="Arcade" price={selected === "monthly" ? "9/mo" : "90/yr"}/>
             </div>
-            <div className="border-2" onClick={() => handleSubscriptionChange("Advanced")}>
+            <div 
+            onClick={() => handleSubscriptionChange("Advanced")}
+            className={`cursor-pointer border-2  rounded-lg ${selectedSubscription === "Advanced" ? " border-blue-300" : "border-slate-300"}`}
+            >
             <Plans  image={advanceImage} option="Advanced" price={selected === "monthly" ? "12/mo" : "120/yr"}/>
             </div>
-            <div onClick={() => handleSubscriptionChange("Pro")}>
+            <div onClick={() => handleSubscriptionChange("Pro")}
+            className={`cursor-pointer border-2  rounded-lg ${selectedSubscription === "Pro" ? " border-blue-300" : "border-slate-300"}`}    
+            >
             <Plans  image={proImage} option="Pro" price={selected === "monthly" ? "15/mo" : "150/yr"}/>
             </div>
         </div>
