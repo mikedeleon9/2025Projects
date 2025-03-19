@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+@theme {
+  --custom-blue: hsl(195, 74%, 62%);
+  --dark-blue: hsl(235, 46%, 20%);
+  
+}
+
+:root {
+  --custom-blue: hsl(195, 74%, 62%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --work-orange: hsl(15, 100%, 70%);
+  --exercise-green: hsl(145, 58%, 55%);
+  --study-red: hsl(348, 100%, 68%);
+  --social-purple: hsl(264, 64%, 52%);
+  --self-care-yellow: hsl(43, 84%, 65%);
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+}
